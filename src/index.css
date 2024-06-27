@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Morganite";
+  src: url("./assets/fonts/Morganite-Book.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Prestage";
+  src: url("./assets/fonts/Prestage\ Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@layer utilities {
+  .container-wrapper {
+    @apply max-w-[1440px];
+  }
+  .border-draft {
+    @apply border-2 border-solid border-black;
+  }
+  .padding-x {
+    @apply px-12 xs:px-16 md:px-20 lg:px-24 xl:px-36;
+  }
+}
