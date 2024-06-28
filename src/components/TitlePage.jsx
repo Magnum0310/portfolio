@@ -2,8 +2,8 @@ import React from "react";
 
 const TitlePage = () => {
   return (
-    <div className="container-wrapper relative size-full">
-      <div className="border-draft relative max-lg:top-[15%] max-lg:h-fit lg:place-content-center">
+    <div className="container-wrapper relative size-full lg:place-content-center">
+      <div className="relative max-lg:top-[15%] max-lg:h-fit">
         <div className="flex h-fit font-morganite text-[7rem] leading-none text-underground-yellow xs:text-[9rem] md:text-[14rem] lg:text-[18rem] xl:text-[22rem] xl:leading-[17rem]">
           FRONT
           <p className="text-underground-silver">-</p>
@@ -21,7 +21,7 @@ const TitlePage = () => {
             </p>
           </div>
           <div className="relative basis-1/4 place-items-center bg-red-500">
-            <div className="absolute bottom-0 left-0 grid h-[50px] w-[30px] translate-y-[1rem] grid-cols-2 grid-rows-3 gap-[.2rem] bg-red-500/0 xs:h-[80px] xs:w-[50px] xs:translate-y-[1.5rem] md:h-[110px] md:gap-[.3rem] lg:ml-5 lg:translate-y-[2.3rem] xl:h-[120px] xl:w-[80px] xl:gap-[.35rem] 2xl:translate-y-[3rem]">
+            <div className="absolute bottom-0 left-0 grid h-[50px] w-[30px] translate-y-[1rem] grid-cols-2 grid-rows-3 gap-[.2rem] bg-red-500/0 xs:h-[80px] xs:w-[50px] xs:translate-y-[1.5rem] md:h-[110px] md:w-[80px] md:gap-[.3rem] lg:ml-5 lg:translate-y-[2.3rem] xl:h-[120px] xl:gap-[.35rem] 2xl:translate-y-[3rem]">
               <div className="size-full bg-underground-silver"></div>
               <div className="size-full bg-underground-silver"></div>
               <div className="size-full bg-underground-silver"></div>

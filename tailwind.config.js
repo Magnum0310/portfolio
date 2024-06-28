@@ -11,6 +11,7 @@ export default {
     fontFamily: {
       morganite: ["Morganite", "sans-serif"],
       prestage: ["Prestage", "sans-serif"],
+      mulish: ["Mulish", "sans-serif"],
     },
     extend: {
       colors: {
