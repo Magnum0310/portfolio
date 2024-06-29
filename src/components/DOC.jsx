@@ -30,7 +30,8 @@ const DOC = () => {
 
   return (
     <div
-      className="container-wrapper relative size-full rounded-3xl border-2 border-solid border-underground-yellow"
+      // className="container-wrapper relative size-full rounded-3xl border-2 border-solid border-underground-yellow"
+      className="container-wrapper relative w-full rounded-3xl border-2 border-solid border-underground-yellow max-xs:h-[80vh] xs:h-[90vh] md:h-full"
       ref={divRef}
     >
       <div className="relative flex size-full flex-col overflow-hidden rounded-3xl bg-start-blue px-8 py-6 xs:py-8 lg:flex-row lg:place-content-center lg:px-10">
@@ -90,8 +91,8 @@ const DOC = () => {
               >
                 {arShop.map((image, index) => (
                   <div
-                    className="h-[100px] w-full lg:h-[200px]"
                     key={index}
+                    className="h-[100px] w-full lg:h-[200px]"
                     style={{
                       backgroundImage: `url(${image})`,
                       backgroundSize: "cover",
@@ -108,8 +109,9 @@ const DOC = () => {
                 className="flex w-full flex-col gap-2"
                 style={{ y: secondHalf }}
               >
-                {arShop1.map((image) => (
+                {arShop1.map((image, index) => (
                   <div
+                    key={index + 1}
                     className="h-[100px] w-full lg:h-[200px]"
                     style={{
                       backgroundImage: `url(${image})`,
@@ -124,7 +126,7 @@ const DOC = () => {
             {/* TOP BLUR */}
             <div className="absolute h-1/4 w-full bg-gradient-to-b from-start-blue via-start-black/80 to-start-black/5"></div>
             {/* BOTTOM BLUR */}
-            <div className="absolute bottom-0 h-[10%] w-full bg-gradient-to-t from-start-blue via-start-black/80 to-start-black/5"></div>
+            <div className="absolute bottom-0 h-[10%] w-full bg-gradient-to-t from-start-blue via-start-black/80 to-start-black/5 max-lg:hidden"></div>
           </div>
         </div>
         {/* TOP */}

@@ -20,6 +20,7 @@ export default {
         "start-white": "#FEF9E6",
         "underground-yellow": "#F8BE4F",
         "underground-silver": "#E3EBED",
+        "underground-blue": "#283747",
       },
       screens: {
         "2xl": "1440px",

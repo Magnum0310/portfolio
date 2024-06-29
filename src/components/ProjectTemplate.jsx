@@ -12,7 +12,16 @@ import ariesFifth from "../assets/aries_stainless/ContactUs.png";
 const arShop = [ariesFirst, ariesSecond, ariesThird, ariesFourth, ariesFifth];
 const arShop1 = [ariesFifth, ariesFourth, ariesThird, ariesSecond, ariesFirst];
 
-const ARSHOP = () => {
+const ProjectTemplate = ({
+  title,
+  firstSubtitle,
+  secondSubtitle,
+  description,
+  github,
+  web,
+  set1,
+  set2,
+}) => {
   const divRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: divRef,
@@ -31,29 +40,31 @@ const ARSHOP = () => {
       className="container-wrapper relative w-full rounded-3xl border-2 border-solid border-underground-yellow max-xs:h-[80vh] xs:h-[90vh] md:h-full"
       ref={divRef}
     >
-      <div className="relative flex size-full flex-col overflow-hidden rounded-3xl bg-start-blue px-8 py-6 xs:py-8 lg:flex-row lg:place-content-center lg:px-10">
+      <div className="bg-underground-blue relative flex size-full flex-col overflow-hidden rounded-3xl px-8 py-6 xs:py-8 lg:flex-row lg:place-content-center lg:px-10">
         {/* TITLE SECTION */}
         <div className="flex h-1/2 flex-col justify-center gap-3 text-underground-yellow lg:h-full lg:basis-1/2 lg:justify-evenly lg:pr-5">
           <div className="flex items-center gap-2">
             <div className="w-fit font-morganite text-6xl md:text-8xl lg:text-9xl 2xl:text-[10rem]">
-              ARSHOP
+              {title}
             </div>
             <div className="h-[90%] w-[.5%] bg-underground-silver lg:w-[1.5%]"></div>
             <div className="w-full font-prestage text-xs xs:text-base md:text-2xl 2xl:text-4xl">
-              <div className="w-full">STAINLESS &</div>
-              <div className="w-full">INSTALLATION SERVICES</div>
+              <div className="w-full">{firstSubtitle}</div>
+              <div className="w-full">{secondSubtitle}</div>
             </div>
           </div>
           {/* DESCRIPTION */}
           <div className="font-mulish text-xs text-underground-silver text-opacity-80 md:text-[.9rem] lg:text-base">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book.{" "}
+            {description}
           </div>
           {/* BUTTONS */}
           <div className="flex h-[30px] w-[40%] items-center gap-2 md:h-[15%] md:w-[35%] lg:h-[10%] lg:w-3/4">
-            <div className="h-3/4 w-1/2 rounded-md border-2 border-solid border-underground-silver bg-underground-yellow py-px text-black lg:w-[35%]">
+            <a
+              className="h-3/4 w-1/2 rounded-md border-2 border-solid border-underground-silver bg-underground-yellow py-px text-black lg:w-[35%]"
+              href={github}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <div
                 className="size-full"
                 style={{
@@ -63,8 +74,13 @@ const ARSHOP = () => {
                   backgroundRepeat: "no-repeat",
                 }}
               ></div>
-            </div>
-            <div className="h-3/4 w-1/2 rounded-md border-2 border-solid border-underground-yellow bg-start-black py-px text-black lg:w-[35%]">
+            </a>
+            <a
+              className="h-3/4 w-1/2 rounded-md border-2 border-solid border-underground-yellow bg-start-black py-px text-black lg:w-[35%]"
+              href={web}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <div
                 className="size-full"
                 style={{
@@ -74,7 +90,7 @@ const ARSHOP = () => {
                   backgroundRepeat: "no-repeat",
                 }}
               ></div>
-            </div>
+            </a>
           </div>
         </div>
         {/* IMAGE SECTION */}
@@ -86,7 +102,7 @@ const ARSHOP = () => {
                 className="flex w-full flex-col gap-2"
                 style={{ y: firstHalf }}
               >
-                {arShop.map((image, index) => (
+                {set1.map((image, index) => (
                   <div
                     className="h-[100px] w-full lg:h-[200px]"
                     key={index}
@@ -106,7 +122,7 @@ const ARSHOP = () => {
                 className="flex w-full flex-col gap-2"
                 style={{ y: secondHalf }}
               >
-                {arShop1.map((image, index) => (
+                {set2.map((image, index) => (
                   <div
                     key={index + 1}
                     className="h-[100px] w-full lg:h-[200px]"
@@ -121,9 +137,9 @@ const ARSHOP = () => {
               </motion.div>
             </div>
             {/* TOP BLUR */}
-            <div className="absolute h-1/4 w-full bg-gradient-to-b from-start-blue via-start-black/80 to-start-black/5"></div>
+            <div className="from-underground-blue absolute h-1/4 w-full bg-gradient-to-b via-start-black/80 to-start-black/5"></div>
             {/* BOTTOM BLUR */}
-            <div className="absolute bottom-0 h-[10%] w-full bg-gradient-to-t from-start-blue via-start-black/80 to-start-black/5 max-lg:hidden"></div>
+            <div className="from-underground-blue absolute bottom-0 h-[10%] w-full bg-gradient-to-t via-start-black/80 to-start-black/5 max-lg:hidden"></div>
           </div>
         </div>
         {/* TOP */}
@@ -140,4 +156,4 @@ const ARSHOP = () => {
   );
 };
 
-export default ARSHOP;
+export default ProjectTemplate;
