@@ -15,9 +15,9 @@ const secondRow = [TAILWIND, FRAMER, FIGMA];
 
 const AboutMe = () => {
   return (
-    <div className="container-wrapper my-16 flex size-full flex-col gap-5">
+    <div className="container-wrapper lg:gird my-16 flex size-full flex-col gap-5 lg:grid lg:grid-cols-5 lg:grid-rows-2">
       {/* ABOUT ME */}
-      <div className="relative flex size-full overflow-hidden rounded-3xl border-2 border-solid border-underground-yellow px-4 py-6 max-xs:h-[60vh] xs:py-8 lg:flex-row lg:place-content-center lg:px-10">
+      <div className="relative flex size-full overflow-hidden rounded-3xl border-2 border-solid border-underground-yellow px-4 py-6 max-xs:h-[60vh] xs:py-8 lg:col-span-3 lg:col-start-1 lg:row-span-1 lg:row-start-1 lg:place-content-center lg:px-6">
         <div className="flex basis-[60%] flex-col items-center justify-center gap-2">
           <div className="flex max-h-[150px] w-full max-w-[150px] justify-center">
             <img src={Avatar} alt="avatar" className="" />
@@ -46,8 +46,10 @@ const AboutMe = () => {
           </div>
         </div>
         <div className="flex basis-full flex-col text-underground-silver">
-          <div className="pl-3 pr-px font-morganite text-7xl">ABOUT ME:</div>
-          <div className="basis-full place-content-center pl-3 pr-px font-mulish text-[.85rem] text-underground-silver text-opacity-80">
+          <div className="pl-3 pr-px font-morganite text-7xl md:text-8xl">
+            ABOUT ME:
+          </div>
+          <div className="basis-full place-content-center pl-3 pr-px font-mulish text-[.85rem] text-underground-silver text-opacity-80 lg:pt-2 lg:text-base 2xl:text-lg">
             Hi there! I'm Christian Daniel Pancho, an eager web developer on a
             self-taught path to mastering the art of coding. My adventure into
             web development began with a simple curiosity about how websites are
@@ -56,31 +58,40 @@ const AboutMe = () => {
         </div>
       </div>
       {/* EXPERIENCES */}
-      <div className="relative flex size-full h-[50vh] flex-col overflow-hidden rounded-3xl border-2 border-solid border-underground-yellow px-4 py-6 font-mulish text-underground-silver text-opacity-80 xs:py-8 lg:flex-row lg:place-content-center lg:px-10">
-        <div className="basis-1/2 font-morganite text-7xl text-underground-silver">
+      <div className="relative flex size-full h-[50vh] flex-col overflow-hidden rounded-3xl border-2 border-solid border-underground-yellow px-10 py-6 font-mulish text-underground-silver text-opacity-80 max-lg:h-fit max-lg:gap-5 xs:py-8 md:px-16 lg:col-span-2 lg:col-start-4 lg:row-span-1 lg:row-start-1 lg:h-full lg:place-content-center lg:px-10">
+        <div className="basis-1/2 font-morganite text-7xl text-underground-silver md:text-8xl">
           EXPERIENCES:
         </div>
-        <div className="flex basis-full flex-col">
-          <div className="basis-1/2">
-            <p className="text-base">NETWORK ENGINEER</p>
-            <p className="text-[.85rem]">Accenture</p>
-            <p className="text-[.85rem]">2022-2023</p>
+        <div className="flex basis-full flex-col xs:flex-row lg:flex-col">
+          <div className="basis-1/2 xs:place-content-center">
+            <p className="text-base lg:text-lg 2xl:text-xl">NETWORK ENGINEER</p>
+            <p className="text-[.85rem] lg:text-base 2xl:text-lg">Accenture</p>
+            <p className="text-[.85rem] 2xl:text-base">2022-2023</p>
           </div>
-          <div className="basis-1/2">
-            <p className="text-base">NETWORK ADMINISTRATOR</p>
-            <p className="text-[.85rem]">Leekie Enterprise</p>
-            <p className="text-[.85rem]">2020-2022</p>
+          <div className="basis-1/2 xs:place-content-center">
+            <p className="text-base lg:text-lg 2xl:text-xl">
+              NETWORK ADMINISTRATOR
+            </p>
+            <p className="text-[.85rem] lg:text-base 2xl:text-lg">
+              Leekie Enterprise
+            </p>
+            <p className="text-[.85rem] 2xl:text-base">2020-2022</p>
           </div>
         </div>
       </div>
       {/* TECH STACK */}
-      <div className="flex size-full flex-col rounded-3xl border-2 border-solid border-underground-yellow px-4 py-6 font-mulish text-underground-silver text-opacity-80 max-xs:h-[60vh] xs:py-8 lg:flex-row lg:place-content-center lg:px-10">
-        <p className="basis-1/4 font-morganite text-7xl">CURRENT TECH STACK:</p>
-        <div className="flex w-full basis-1/2 items-center justify-center">
+      <div className="flex size-full flex-col rounded-3xl border-2 border-solid border-underground-yellow px-4 py-6 font-mulish xs:py-8 lg:col-span-5 lg:col-start-1 lg:row-start-2 lg:flex-col lg:place-content-center lg:px-6">
+        <p className="basis-1/4 text-center font-morganite text-7xl text-underground-silver md:text-8xl">
+          CURRENT TECH STACK:
+        </p>
+        <div className="flex w-full basis-1/2 items-center justify-center lg:gap-5">
           {firstRow.map((image, index) => (
-            <div className="basis-1/2 p-3" key={index}>
+            <div
+              className="basis-[20%] p-3 xs:basis-[15%] lg:basis-[15%]"
+              key={index}
+            >
               <div
-                className="h-[80px] w-full"
+                className="h-[80px] w-full opacity-85"
                 style={{
                   backgroundImage: `url("${image}")`,
                   backgroundSize: "contain",
@@ -91,11 +102,14 @@ const AboutMe = () => {
             </div>
           ))}
         </div>
-        <div className="flex w-full basis-1/2 justify-center bg-amber-500/0 px-[40px]">
+        <div className="flex h-fit w-full justify-center bg-amber-500/0 px-[40px] lg:gap-10">
           {secondRow.map((image, index) => (
-            <div className="basis-1/2 p-3" key={index}>
+            <div
+              className="basis-[25%] p-3 xs:basis-[20%] md:basis-[15%] lg:basis-[15%] xl:basis-[12%]"
+              key={index}
+            >
               <div
-                className="h-[80px] w-full"
+                className="h-[80px] w-full opacity-85"
                 style={{
                   backgroundImage: `url("${image}")`,
                   backgroundSize: "contain",

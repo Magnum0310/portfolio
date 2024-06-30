@@ -40,21 +40,21 @@ const ProjectTemplate = ({
       className="container-wrapper relative w-full rounded-3xl border-2 border-solid border-underground-yellow max-xs:h-[80vh] xs:h-[90vh] md:h-full"
       ref={divRef}
     >
-      <div className="bg-underground-blue relative flex size-full flex-col overflow-hidden rounded-3xl px-8 py-6 xs:py-8 lg:flex-row lg:place-content-center lg:px-10">
+      <div className="relative flex size-full flex-col overflow-hidden rounded-3xl bg-underground-blue px-8 py-6 xs:py-8 lg:flex-row lg:place-content-center lg:px-10">
         {/* TITLE SECTION */}
         <div className="flex h-1/2 flex-col justify-center gap-3 text-underground-yellow lg:h-full lg:basis-1/2 lg:justify-evenly lg:pr-5">
           <div className="flex items-center gap-2">
-            <div className="w-fit font-morganite text-6xl md:text-8xl lg:text-9xl 2xl:text-[10rem]">
+            <div className="w-fit font-morganite text-7xl tracking-wide md:text-8xl lg:text-9xl 2xl:text-[10rem]">
               {title}
             </div>
             <div className="h-[90%] w-[.5%] bg-underground-silver lg:w-[1.5%]"></div>
-            <div className="w-full font-prestage text-xs xs:text-base md:text-2xl 2xl:text-4xl">
+            <div className="w-full font-prestage text-[.85rem] xs:text-base md:text-2xl 2xl:text-4xl">
               <div className="w-full">{firstSubtitle}</div>
               <div className="w-full">{secondSubtitle}</div>
             </div>
           </div>
           {/* DESCRIPTION */}
-          <div className="font-mulish text-xs text-underground-silver text-opacity-80 md:text-[.9rem] lg:text-base">
+          <div className="font-mulish text-[.85rem] text-underground-silver text-opacity-80 md:text-[.9rem] lg:text-base 2xl:text-lg">
             {description}
           </div>
           {/* BUTTONS */}
@@ -137,9 +137,9 @@ const ProjectTemplate = ({
               </motion.div>
             </div>
             {/* TOP BLUR */}
-            <div className="from-underground-blue absolute h-1/4 w-full bg-gradient-to-b via-start-black/80 to-start-black/5"></div>
+            <div className="absolute h-1/4 w-full bg-gradient-to-b from-underground-blue via-start-black/80 to-start-black/5"></div>
             {/* BOTTOM BLUR */}
-            <div className="from-underground-blue absolute bottom-0 h-[10%] w-full bg-gradient-to-t via-start-black/80 to-start-black/5 max-lg:hidden"></div>
+            <div className="absolute bottom-0 h-[10%] w-full bg-gradient-to-t from-underground-blue via-start-black/80 to-start-black/5 max-lg:hidden"></div>
           </div>
         </div>
         {/* TOP */}
