@@ -25,7 +25,7 @@ import rsvpReceptionLocation from "../../assets/RSVP/ReceptionLocationPage.png";
 const Data = [
   // DOC Architect Services
   [docHero, docLandscape, docDesign, docAbout, docWorks, docContact],
-  [docWorks, docAbout, docHero, docLandscape, docContact, docDesign],
+  [docDesign, docAbout, docWorks, docContact, docHero, docLandscape],
   // ARShop Stainlesss and Installation Services
   [
     ariesChooseContent,
@@ -35,11 +35,12 @@ const Data = [
     ariesContact,
   ],
   [
-    ariesContact,
-    ariesServiceContent,
-    ariesChooseContent,
-    ariesChoose,
     ariesHero,
+    ariesServiceContent,
+
+    ariesContact,
+    ariesChoose,
+    ariesChooseContent,
   ],
   // RSVP ONLINE WEDDING
   [rsvpHero, rsvpHero2, rsvpEntourage, rsvpEntourage2, rsvpTimeline],
@@ -58,7 +59,7 @@ export const Info = {
     firstSubtitle: "STAINLESS &",
     secondSubtitle: "INSTALLATION SERVICES",
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "A clean and modern static business website designed for simplicity and ease of use.The site offers visitors a clear overview of the business’s offerings, highlighting key products and detailing the services available.",
     github: "https://github.com/Magnum0310",
     web: "https://arshop-ph.online",
   },
@@ -67,7 +68,7 @@ export const Info = {
     firstSubtitle: "ARCHITECTURAL",
     secondSubtitle: "SERVICES",
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "A professional static website developed for DOC, a architectural firm providing specialized business solutions. The website outlines the firm's key services, expertise, and approach. With a minimalist design and straightforward navigation, it allows potential clients to quickly understand what DOC offers and encourages them to get in touch for consultations.",
     github: "https://github.com/Magnum0310",
     web: "https://dave-architect.online",
   },
@@ -77,7 +78,7 @@ export const Info = {
     firstSubtitle: "CUSTOMIZED ONLINE",
     secondSubtitle: "WEDDING RSVP",
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "A personalized online RSVP platform created for a wedding event. The website includes details about the event, such as the date, venue, schedule, and special instructions.It has a responsive design that ensures a smooth experience across all devices",
     github: "https://github.com/Magnum0310",
     web: "https://google.com",
   },

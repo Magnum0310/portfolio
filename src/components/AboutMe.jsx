@@ -18,7 +18,7 @@ const AboutMe = () => {
   return (
     <div className="container-wrapper lg:gird my-16 flex size-full flex-col gap-5 lg:grid lg:grid-cols-5 lg:grid-rows-2">
       {/* ABOUT ME */}
-      <div className="relative flex size-full overflow-hidden rounded-3xl border-2 border-solid border-underground-yellow px-4 py-6 max-xs:h-[60vh] xs:py-8 lg:col-span-3 lg:col-start-1 lg:row-span-1 lg:row-start-1 lg:place-content-center lg:px-6">
+      <div className="relative flex size-full overflow-hidden rounded-3xl border-2 border-solid border-underground-yellow bg-underground-blue px-4 py-6 max-xs:h-[60vh] xs:py-8 lg:col-span-3 lg:col-start-1 lg:row-span-1 lg:row-start-1 lg:place-content-center lg:px-6">
         <div className="flex basis-[60%] flex-col items-center justify-center gap-2">
           <div className="flex max-h-[150px] w-full max-w-[150px] justify-center">
             <img src={Avatar} alt="avatar" className="" />
@@ -60,7 +60,7 @@ const AboutMe = () => {
         </div>
       </div>
       {/* EXPERIENCES */}
-      <div className="relative flex size-full h-[50vh] flex-col overflow-hidden rounded-3xl border-2 border-solid border-underground-yellow px-10 py-6 font-mulish text-underground-silver text-opacity-80 max-lg:h-fit max-lg:gap-5 xs:py-8 md:px-16 lg:col-span-2 lg:col-start-4 lg:row-span-1 lg:row-start-1 lg:h-full lg:place-content-center lg:px-10">
+      <div className="relative flex size-full h-[50vh] flex-col overflow-hidden rounded-3xl border-2 border-solid border-underground-yellow bg-underground-blue px-10 py-6 font-mulish text-underground-silver text-opacity-80 max-lg:h-fit max-lg:gap-5 xs:py-8 md:px-16 lg:col-span-2 lg:col-start-4 lg:row-span-1 lg:row-start-1 lg:h-full lg:place-content-center lg:px-10">
         <div className="basis-1/2 font-morganite text-7xl text-underground-silver md:text-8xl">
           EXPERIENCES:
         </div>
@@ -82,7 +82,7 @@ const AboutMe = () => {
         </div>
       </div>
       {/* TECH STACK */}
-      <div className="flex size-full min-h-[50vh] flex-col justify-center gap-10 rounded-3xl border-2 border-solid border-underground-yellow px-4 py-6 font-mulish xs:pb-4 xs:pt-6 lg:col-span-5 lg:col-start-1 lg:row-start-2 lg:flex-col lg:place-content-center lg:px-6">
+      <div className="flex size-full min-h-[30vh] flex-col justify-center gap-10 rounded-3xl border-2 border-solid border-underground-yellow bg-underground-blue px-4 py-6 font-mulish lg:col-span-5 lg:col-start-1 lg:row-start-2 lg:flex-col lg:place-content-center">
         <p className="basis-1/4 text-center font-morganite text-7xl text-underground-silver md:text-8xl">
           CURRENT TECH STACK:
         </p>
@@ -90,7 +90,7 @@ const AboutMe = () => {
           <div className="flex w-full basis-1/2 items-center justify-center gap-5 lg:gap-5">
             {firstRow.map((image, index) => (
               <div
-                className="basis-[20%] p-3 xs:basis-[15%] lg:basis-[15%]"
+                className="basis-[20%] p-1 xs:basis-[15%] lg:basis-[15%] lg:p-3"
                 key={index}
               >
                 <div
@@ -109,7 +109,7 @@ const AboutMe = () => {
           <div className="flex w-full basis-1/2 items-center justify-center gap-5 lg:gap-5">
             {secondRow.map((image, index) => (
               <div
-                className="basis-[20%] p-3 xs:basis-[15%] lg:basis-[15%]"
+                className="basis-[20%] p-1 xs:basis-[15%] lg:basis-[15%] lg:p-3"
                 // className="basis-[25%] p-3 xs:basis-[20%] md:basis-[15%] lg:basis-[15%] xl:basis-[12%]"
                 key={index}
               >

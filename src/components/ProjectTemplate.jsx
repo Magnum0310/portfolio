@@ -9,9 +9,8 @@ import ariesThird from "../assets/aries_stainless/ChooseUsContent.png";
 import ariesFourth from "../assets/aries_stainless/ServicesContent.png";
 import ariesFifth from "../assets/aries_stainless/ContactUs.png";
 
-const arShop = [ariesFirst, ariesSecond, ariesThird, ariesFourth, ariesFifth];
-const arShop1 = [ariesFifth, ariesFourth, ariesThird, ariesSecond, ariesFirst];
-
+// const arShop = [ariesFirst, ariesSecond, ariesThird, ariesFourth, ariesFifth];
+// const arShop1 = [ariesFifth, ariesFourth, ariesThird, ariesSecond, ariesFirst];
 const ProjectTemplate = ({
   title,
   firstSubtitle,
@@ -25,10 +24,10 @@ const ProjectTemplate = ({
   const divRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: divRef,
-    offset: ["start center", "end start"],
+    offset: ["start end", "end start"],
   });
 
-  const firstHalf = useTransform(scrollYProgress, [0, 0.3, 1], [-100, -75, 5]);
+  const firstHalf = useTransform(scrollYProgress, [0, 0.3, 1], [-150, -75, 5]);
   const secondHalf = useTransform(
     scrollYProgress,
     [0, 0.2, 1],
@@ -40,16 +39,15 @@ const ProjectTemplate = ({
       className="container-wrapper relative w-full rounded-3xl border-2 border-solid border-underground-yellow max-xs:h-[80vh] xs:h-[90vh] md:h-full"
       ref={divRef}
     >
-      <div className="relative flex size-full flex-col overflow-hidden rounded-3xl bg-underground-blue px-8 py-6 xs:py-8 lg:flex-row lg:place-content-center lg:px-10">
+      <div className="relative flex size-full flex-col overflow-hidden rounded-3xl bg-underground-blue px-8 pb-6 pt-10 xs:py-8 lg:flex-row lg:place-content-center lg:px-10">
         {/* TITLE SECTION */}
-        <div className="flex h-1/2 flex-col justify-center gap-3 text-underground-yellow lg:h-full lg:basis-1/2 lg:justify-evenly lg:pr-5">
-          {/* <div className="bg-purple-500"> */}
-          <div className="items-left flex gap-2 bg-emerald-500/0 max-lg:w-full max-lg:flex-col max-lg:gap-1 lg:items-center">
-            <div className="max-lg:justify-left w-fit bg-red-500/0 font-morganite text-6xl tracking-wide max-lg:flex max-lg:w-full md:text-8xl lg:text-9xl 2xl:text-[10rem]">
+        <div className="flex h-1/2 flex-col items-center justify-center gap-3 text-underground-yellow lg:h-full lg:basis-1/2 lg:justify-evenly lg:pr-5">
+          <div className="lg:items-left flex w-full items-center gap-5 bg-emerald-500/0 max-lg:flex-col max-lg:gap-1 lg:items-center">
+            <div className="lg:justify-left flex w-fit justify-center font-morganite text-6xl tracking-wide max-lg:w-full md:text-8xl lg:text-9xl 2xl:text-[10rem]">
               {title}
             </div>
             <div className="h-[90%] w-[.5%] bg-underground-silver max-lg:h-[.15rem] max-lg:w-1/2 lg:w-[1.5%]"></div>
-            <div className="max-lg:justify-left w-full bg-cyan-500/0 font-prestage max-lg:flex xs:text-base md:text-2xl 2xl:text-4xl">
+            <div className="lg:justify-left flex w-full justify-center font-prestage xs:text-xl md:text-3xl lg:flex-col 2xl:text-4xl">
               <div className="lg:hidden">
                 {firstSubtitle + " " + secondSubtitle}
               </div>
@@ -59,11 +57,11 @@ const ProjectTemplate = ({
             {/* </div> */}
           </div>
           {/* DESCRIPTION */}
-          <div className="font-mulish text-[.85rem] text-underground-silver text-opacity-80 md:text-[.9rem] lg:text-base 2xl:text-lg">
+          <div className="font-mulish text-[.85rem] text-underground-silver text-opacity-80 max-lg:text-center md:text-[.9rem] lg:text-base 2xl:text-lg">
             {description}
           </div>
           {/* BUTTONS */}
-          <div className="flex h-[30px] w-[40%] items-center gap-2 md:h-[15%] md:w-[35%] lg:h-[10%] lg:w-3/4">
+          <div className="flex h-[40px] w-[45%] items-center gap-2 md:h-[15%] md:w-[35%] lg:h-[10%] lg:w-3/4">
             <a
               className="h-3/4 w-1/2 rounded-md border-2 border-solid border-underground-silver bg-underground-yellow py-px text-black lg:w-[35%]"
               href={github}
@@ -102,14 +100,15 @@ const ProjectTemplate = ({
         <div className="h-3/4 md:h-1/2 lg:h-full lg:basis-1/2">
           <div className="relative flex size-full gap-2 bg-start-blue">
             {/* FIRST HALF */}
-            <div className="flex basis-1/2 flex-col items-center overflow-hidden">
+            <div className="flex h-[200%] basis-1/2 flex-col items-center overflow-hidden">
               <motion.div
-                className="flex w-full flex-col gap-2"
+                className="flex size-full flex-col gap-2"
                 style={{ y: firstHalf }}
               >
                 {set1.map((image, index) => (
                   <div
-                    className="h-[100px] w-full lg:h-[200px]"
+                    // className="h-[100px] w-full lg:h-[200px]"
+                    className="size-full"
                     key={index}
                     style={{
                       backgroundImage: `url(${image})`,
@@ -122,15 +121,15 @@ const ProjectTemplate = ({
               </motion.div>
             </div>
             {/* SECOND HALF */}
-            <div className="flex basis-1/2 flex-col items-center overflow-hidden">
+            <div className="flex h-[200%] basis-1/2 flex-col items-center overflow-hidden">
               <motion.div
-                className="flex w-full flex-col gap-2"
+                className="flex size-full flex-col gap-2"
                 style={{ y: secondHalf }}
               >
                 {set2.map((image, index) => (
                   <div
                     key={index + 1}
-                    className="h-[100px] w-full lg:h-[200px]"
+                    className="size-full"
                     style={{
                       backgroundImage: `url(${image})`,
                       backgroundSize: "cover",
