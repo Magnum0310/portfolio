@@ -9,9 +9,10 @@ import REACT from "../assets/icons/react_gray.svg";
 import TAILWIND from "../assets/icons/tailwind_gray.svg";
 import FRAMER from "../assets/icons/framer_gray.svg";
 import FIGMA from "../assets/icons/figma_gray.svg";
+import GSAP from "../assets/icons/gsap_gray.svg";
 
 const firstRow = [HTML, CSS, JS, REACT];
-const secondRow = [TAILWIND, FRAMER, FIGMA];
+const secondRow = [TAILWIND, FRAMER, FIGMA, GSAP];
 
 const AboutMe = () => {
   return (
@@ -50,10 +51,11 @@ const AboutMe = () => {
             ABOUT ME:
           </div>
           <div className="basis-full place-content-center pl-3 pr-px font-mulish text-[.85rem] text-underground-silver text-opacity-80 lg:pt-2 lg:text-base 2xl:text-lg">
-            Hi there! I'm Christian Daniel Pancho, an eager web developer on a
-            self-taught path to mastering the art of coding. My adventure into
-            web development began with a simple curiosity about how websites are
-            created and has quickly grown into a full-fledged passion.
+            Hi there! I'm Christian Daniel Pancho, an eager Front-end developer
+            on a self-taught path to mastering the art of coding. My adventure
+            into web development began with a simple curiosity about how
+            websites are created and has quickly grown into a full-fledged
+            passion.
           </div>
         </div>
       </div>
@@ -80,45 +82,49 @@ const AboutMe = () => {
         </div>
       </div>
       {/* TECH STACK */}
-      <div className="flex size-full flex-col rounded-3xl border-2 border-solid border-underground-yellow px-4 py-6 font-mulish xs:py-8 lg:col-span-5 lg:col-start-1 lg:row-start-2 lg:flex-col lg:place-content-center lg:px-6">
+      <div className="flex size-full min-h-[50vh] flex-col justify-center gap-10 rounded-3xl border-2 border-solid border-underground-yellow px-4 py-6 font-mulish xs:pb-4 xs:pt-6 lg:col-span-5 lg:col-start-1 lg:row-start-2 lg:flex-col lg:place-content-center lg:px-6">
         <p className="basis-1/4 text-center font-morganite text-7xl text-underground-silver md:text-8xl">
           CURRENT TECH STACK:
         </p>
-        <div className="flex w-full basis-1/2 items-center justify-center lg:gap-5">
-          {firstRow.map((image, index) => (
-            <div
-              className="basis-[20%] p-3 xs:basis-[15%] lg:basis-[15%]"
-              key={index}
-            >
+        <div className="flex flex-col gap-2">
+          <div className="flex w-full basis-1/2 items-center justify-center gap-5 lg:gap-5">
+            {firstRow.map((image, index) => (
               <div
-                className="h-[80px] w-full opacity-85"
-                style={{
-                  backgroundImage: `url("${image}")`,
-                  backgroundSize: "contain",
-                  backgroundRepeat: "no-repeat",
-                  backgroundPosition: "center",
-                }}
-              ></div>
-            </div>
-          ))}
-        </div>
-        <div className="flex h-fit w-full justify-center bg-amber-500/0 px-[40px] lg:gap-10">
-          {secondRow.map((image, index) => (
-            <div
-              className="basis-[25%] p-3 xs:basis-[20%] md:basis-[15%] lg:basis-[15%] xl:basis-[12%]"
-              key={index}
-            >
+                className="basis-[20%] p-3 xs:basis-[15%] lg:basis-[15%]"
+                key={index}
+              >
+                <div
+                  className="h-[80px] w-full opacity-85"
+                  style={{
+                    backgroundImage: `url("${image}")`,
+                    backgroundSize: "contain",
+                    backgroundRepeat: "no-repeat",
+                    backgroundPosition: "center",
+                  }}
+                ></div>
+              </div>
+            ))}
+          </div>
+          {/* <div className="flex h-fit w-full justify-center bg-amber-500/0 px-[40px] lg:gap-10"> */}
+          <div className="flex w-full basis-1/2 items-center justify-center gap-5 lg:gap-5">
+            {secondRow.map((image, index) => (
               <div
-                className="h-[80px] w-full opacity-85"
-                style={{
-                  backgroundImage: `url("${image}")`,
-                  backgroundSize: "contain",
-                  backgroundRepeat: "no-repeat",
-                  backgroundPosition: "center",
-                }}
-              ></div>
-            </div>
-          ))}
+                className="basis-[20%] p-3 xs:basis-[15%] lg:basis-[15%]"
+                // className="basis-[25%] p-3 xs:basis-[20%] md:basis-[15%] lg:basis-[15%] xl:basis-[12%]"
+                key={index}
+              >
+                <div
+                  className="h-[80px] w-full opacity-85 transition-all"
+                  style={{
+                    backgroundImage: `url("${image}")`,
+                    backgroundSize: "contain",
+                    backgroundRepeat: "no-repeat",
+                    backgroundPosition: "center",
+                  }}
+                ></div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>

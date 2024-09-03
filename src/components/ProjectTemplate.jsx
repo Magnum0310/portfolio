@@ -43,15 +43,20 @@ const ProjectTemplate = ({
       <div className="relative flex size-full flex-col overflow-hidden rounded-3xl bg-underground-blue px-8 py-6 xs:py-8 lg:flex-row lg:place-content-center lg:px-10">
         {/* TITLE SECTION */}
         <div className="flex h-1/2 flex-col justify-center gap-3 text-underground-yellow lg:h-full lg:basis-1/2 lg:justify-evenly lg:pr-5">
-          <div className="flex items-center gap-2">
-            <div className="w-fit font-morganite text-7xl tracking-wide md:text-8xl lg:text-9xl 2xl:text-[10rem]">
+          {/* <div className="bg-purple-500"> */}
+          <div className="items-left flex gap-2 bg-emerald-500/0 max-lg:w-full max-lg:flex-col max-lg:gap-1 lg:items-center">
+            <div className="max-lg:justify-left w-fit bg-red-500/0 font-morganite text-6xl tracking-wide max-lg:flex max-lg:w-full md:text-8xl lg:text-9xl 2xl:text-[10rem]">
               {title}
             </div>
-            <div className="h-[90%] w-[.5%] bg-underground-silver lg:w-[1.5%]"></div>
-            <div className="w-full font-prestage text-[.85rem] xs:text-base md:text-2xl 2xl:text-4xl">
-              <div className="w-full">{firstSubtitle}</div>
-              <div className="w-full">{secondSubtitle}</div>
+            <div className="h-[90%] w-[.5%] bg-underground-silver max-lg:h-[.15rem] max-lg:w-1/2 lg:w-[1.5%]"></div>
+            <div className="max-lg:justify-left w-full bg-cyan-500/0 font-prestage max-lg:flex xs:text-base md:text-2xl 2xl:text-4xl">
+              <div className="lg:hidden">
+                {firstSubtitle + " " + secondSubtitle}
+              </div>
+              <div className="w-full max-lg:hidden">{firstSubtitle}</div>
+              <div className="w-full max-lg:hidden">{secondSubtitle}</div>
             </div>
+            {/* </div> */}
           </div>
           {/* DESCRIPTION */}
           <div className="font-mulish text-[.85rem] text-underground-silver text-opacity-80 md:text-[.9rem] lg:text-base 2xl:text-lg">
@@ -144,7 +149,6 @@ const ProjectTemplate = ({
         </div>
         {/* TOP */}
         <div className="absolute left-0 top-0 h-[25px] w-full bg-gradient-to-b from-start-black via-start-black to-start-black/10 lg:h-[45px]"></div>
-
         {/* BOTTOM */}
         <div className="absolute bottom-0 left-0 h-[40px] w-full bg-gradient-to-t from-start-black via-start-black to-start-black/10 lg:h-[60px]"></div>
         {/* LEFT */}
