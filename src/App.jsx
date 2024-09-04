@@ -11,7 +11,6 @@ import Data, { Info } from "./components/constants/Data";
 function App() {
   useEffect(() => {
     const lenis = new Lenis();
-
     function raf(time) {
       lenis.raf(time);
       requestAnimationFrame(raf);
@@ -29,7 +28,7 @@ function App() {
           backgroundPosition: "center",
         }}
       >
-        <div className="container-wrapper flex h-[80vh] w-full max-xs:h-[30vh] xs:max-md:h-[60vh]">
+        <div className="container-wrapper flex h-[80vh] w-full border-2 border-solid border-green-500 max-xs:h-[33vh] xs:max-md:h-[40vh] md:max-lg:h-[60vh]">
           <Title />
         </div>
         {/* ARSHOP */}
