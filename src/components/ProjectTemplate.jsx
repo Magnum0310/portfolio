@@ -57,7 +57,7 @@ const ProjectTemplate = ({
             {/* </div> */}
           </div>
           {/* DESCRIPTION */}
-          <div className="font-mulish text-[.85rem] text-underground-silver text-opacity-80 max-lg:text-center md:text-[.9rem] lg:text-base 2xl:text-lg">
+          <div className="line-clamp-6 w-full font-mulish text-[.85rem] text-underground-silver text-opacity-80 max-lg:text-center md:text-[.9rem] lg:text-base 2xl:text-lg">
             {description}
           </div>
           {/* BUTTONS */}

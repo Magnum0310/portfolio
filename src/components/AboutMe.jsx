@@ -68,7 +68,7 @@ const AboutMe = () => {
           <div className="basis-1/2 xs:place-content-center">
             <p className="text-base lg:text-lg 2xl:text-xl">NETWORK ENGINEER</p>
             <p className="text-[.85rem] lg:text-base 2xl:text-lg">Accenture</p>
-            <p className="text-[.85rem] 2xl:text-base">2022-2023</p>
+            <p className="text-[.85rem] 2xl:text-base">2021-2023</p>
           </div>
           <div className="basis-1/2 xs:place-content-center">
             <p className="text-base lg:text-lg 2xl:text-xl">
@@ -77,7 +77,7 @@ const AboutMe = () => {
             <p className="text-[.85rem] lg:text-base 2xl:text-lg">
               Leekie Enterprise
             </p>
-            <p className="text-[.85rem] 2xl:text-base">2020-2022</p>
+            <p className="text-[.85rem] 2xl:text-base">2019-2021</p>
           </div>
         </div>
       </div>
@@ -90,7 +90,7 @@ const AboutMe = () => {
           <div className="flex w-full basis-1/2 items-center justify-center gap-5 lg:gap-5">
             {firstRow.map((image, index) => (
               <div
-                className="basis-[20%] p-1 xs:basis-[15%] lg:basis-[15%] lg:p-3"
+                className="basis-[15%] p-1 xs:basis-[15%] lg:basis-[15%] lg:p-3"
                 key={index}
               >
                 <div
@@ -105,12 +105,10 @@ const AboutMe = () => {
               </div>
             ))}
           </div>
-          {/* <div className="flex h-fit w-full justify-center bg-amber-500/0 px-[40px] lg:gap-10"> */}
           <div className="flex w-full basis-1/2 items-center justify-center gap-5 lg:gap-5">
             {secondRow.map((image, index) => (
               <div
-                className="basis-[20%] p-1 xs:basis-[15%] lg:basis-[15%] lg:p-3"
-                // className="basis-[25%] p-3 xs:basis-[20%] md:basis-[15%] lg:basis-[15%] xl:basis-[12%]"
+                className="basis-[15%] p-1 xs:basis-[15%] lg:basis-[15%] lg:p-3"
                 key={index}
               >
                 <div

@@ -25,6 +25,6 @@
     @apply border-2 border-solid border-black;
   }
   .padding-x {
-    @apply px-12 xs:px-16 md:px-20 lg:px-24 xl:px-36;
+    @apply px-8 xs:px-16 md:px-20 lg:px-24 xl:px-36;
   }
 }
