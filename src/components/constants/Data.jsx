@@ -80,7 +80,7 @@ export const Info = {
     description:
       "A personalized online RSVP platform created for a wedding event. The website includes details about the event, such as the date, venue, schedule, and special instructions.It has a responsive design that ensures a smooth experience across all devices",
     github: "https://github.com/Magnum0310",
-    web: "https://google.com",
+    web: "https://magnum0310.github.io/RSVP",
   },
 };
 

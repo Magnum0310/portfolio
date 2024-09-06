@@ -26,7 +26,7 @@ const AboutMe = () => {
           <div className="flex w-full justify-center gap-5">
             <div className="max-h-[25px] max-w-[25px] xs:max-h-[35px] xs:max-w-[35px]">
               <a
-                href="https://github.com"
+                href="https://github.com/Magnum0310"
                 className="h-full w-1/4 basis-1/4"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -36,7 +36,7 @@ const AboutMe = () => {
             </div>
             <div className="max-h-[25px] max-w-[25px] xs:max-h-[35px] xs:max-w-[35px]">
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/christian-daniel-pancho-5a1719184"
                 className="h-full w-1/4 basis-1/4"
                 target="_blank"
                 rel="noopener noreferrer"
